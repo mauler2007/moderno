@@ -400,6 +400,46 @@
 
 
 // end author
+// start touturial
+
+.tutorial {
+    padding: 70px 0 120px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        min-height: 370px;
+        width: 100%;
+    }
+    
+}
+.tutorial__item + .tutorial__item {
+    margin-left: 10px;
+}
+
+
+.tutorial__item {
+    
+    &-images {
+        min-height: 270px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &-title {
+        background-color: #f8f8f8;
+        font-size: 24px;
+        text-align: center;
+        @include f700;
+        padding: 30px 10px;
+        color: $bg;
+        text-align: center;
+    }
+}
+
+// end touturial
 
 
 
