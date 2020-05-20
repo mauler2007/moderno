@@ -7,7 +7,7 @@ $(function(){
     var mixer = mixitup('.products__inner-box');
 
     $(".rate-star").rateYo({
-        rating: 4,
+        rating: 5,
         starWidth: "12px",
         readOnly: true
       });

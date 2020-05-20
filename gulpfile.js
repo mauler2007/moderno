@@ -50,7 +50,7 @@ gulp.task('html',function(){
 });
 
 gulp.task('js',function(){
-    return gulp.src('app/*.js')
+    return gulp.src('app/js/*.js')
     .pipe(browserSync.reload({stream: true}))
 });
 
@@ -67,7 +67,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function(){
     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
     gulp.watch('app/*.html', gulp.parallel('html'));
-    gulp.watch('app/*.js', gulp.parallel('js'));
+    gulp.watch('app/js/*.js', gulp.parallel('js'));
 });
 
 gulp.task('default', gulp.parallel('style', 'sass', 'watch', 'script', 'browser-sync'))
