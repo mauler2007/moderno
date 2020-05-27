@@ -43,6 +43,17 @@ $(function(){
 
 
 
+//  делаю гамбургер
+$('.menu__btn').on('click', function(){     
+      $('.menu__list').slideToggle();
+});
+
+//  добавляю активный класс, делаю выпадашку на user
+$('.header__btn-menu').on('click', function(){     
+      $('.header__box').toggleClass('active');
+});
+
+
 
 
  var mixer = mixitup('.products__inner-box');
