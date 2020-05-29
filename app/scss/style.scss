@@ -1,11 +1,13 @@
 @import 'vars' ;
 @import 'global' ;
 @import 'fonts';
-@import 'media';
+
 
 
 // start header
-
+.header{
+    background-color: #fff;
+}
 .header__top-inner {
     display: flex;
     justify-content: space-between;
@@ -110,6 +112,7 @@
     }
 }
 .basket{
+    margin-right: 20px;
     span{
     background-color: $green;      
     }
@@ -119,12 +122,16 @@
 .header__btn-login--off {
     display: none;
 }
+
+// наверное тут
 .header__btn-logout {
     display: none;
-    &.header__btn-login--on{
-        display: block;
+    &.header__btn-login--off{
+        display: none;   
     }
 }
+// наверное тутД
+
 .user{
     margin-left: 20px;
     margin-right: 25px;
@@ -328,7 +335,7 @@
 }
 
 .header__btn {
-    display: none;
+    display: block;
 }
 
 .header__btn-menu{
@@ -1305,3 +1312,4 @@ button.icon-unsorted {
 
 // end product page
 
+@import 'media';
