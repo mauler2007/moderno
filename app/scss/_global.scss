@@ -22,7 +22,8 @@ a {
 }
 
 ul,
-li {
+li,
+p {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -41,7 +42,7 @@ body {
 	display: flex;
 	flex-direction: column;
     min-height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #f4f6f5;
     overflow-x: hidden;
     position: relative;
 }
@@ -87,6 +88,8 @@ body {
     display: inline-block;
     margin-right: 13px;
 }
+
+
 
 .breadcrumbs{
     &__inner {

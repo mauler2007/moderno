@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300,500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -47,7 +47,7 @@
                                         <a href="#" class="circle__item icon-bell-o icons-color">
 
                                             <img class="circle__images" src="images/content/girl-message.jpg" alt="">
-                                            <div class="circle__info">                                              
+                                            <div class="circle__info">
                                                 <div class="circle__info-thema">Need WP Help!</div>
                                                 <div class="circle__info-data">01 Dec, 2016</div>
                                             </div>
@@ -57,22 +57,22 @@
                                         <a href="#" class="circle__item icon-bell-o ">
 
                                             <img class="circle__images" src="images/content/boy-message.jpg" alt="">
-                                            <div class="circle__info">                                               
+                                            <div class="circle__info">
                                                 <div class="circle__info-thema">Need WP Help!</div>
                                                 <div class="circle__info-data">26 Nov, 2016</div>
                                             </div>
 
-                                        </a>  
+                                        </a>
 
                                         <a href="#" class="circle__item icon-bell-o ">
 
                                             <img class="circle__images" src="images/content/man-message.jpg" alt="">
-                                            <div class="circle__info">                                              
+                                            <div class="circle__info">
                                                 <div class="circle__info-thema">Psd Template Help!</div>
                                                 <div class="circle__info-data">26 Nov, 2016</div>
                                             </div>
 
-                                        </a>  
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="message__box header__btn-login--off">
@@ -101,7 +101,7 @@
                                                 <div class="circle__info-data">$59</div>
                                             </div>
 
-                                        </a>    
+                                        </a>
                                         <a href="#" class="circle__item icon-mail-reply ">
 
                                             <img class="circle__images" src="images/content/man-bell.jpg" alt="">
@@ -111,7 +111,7 @@
                                                 <div class="circle__info-data">$59</div>
                                             </div>
 
-                                        </a>                                                      
+                                        </a>
 
                                     </div>
                                 </div>
@@ -184,7 +184,8 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <a href="#" class="header__btn header__btn-login ">Login</a>
+                                <a data-fancybox data-src="#modal" href="javascript:;"
+                                    class="header__btn header__btn-login ">Login</a>
                                 <a href="#" class="header__btn header__btn-logout header__btn-login--off">logout</a>
                                 <a href="#" class="header__btn header__btn-register ">Register</a>
                             </div>
@@ -1438,6 +1439,31 @@
         </footer>
     </div>
 
+
+
+    <!-- start modal -->
+    <div id="modal">
+        <div class="login__wrapper">
+            <div class="login__title">
+                Login
+            </div>
+            <form>
+                <label class="login__label login__label-name">
+                    <input type="text" placeholder="Name" required>
+
+                </label>
+
+                <label class="login__label login__label-pass">
+                    <input type="text" placeholder="Password" required>
+
+                </label>
+                <button type="submit">submit</button>
+                <a class="create-acc" href="#">Creat An Account?</a>
+                <a class="lost-pass" href="#">Lost Password?</a>
+            </form>
+        </div>
+    </div>
+    <!-- start modal -->
 
 
 
