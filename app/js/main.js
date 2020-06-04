@@ -48,8 +48,7 @@ $(function(){
             $('#'+id).addClass('active-tab').fadeIn();
             return false;
       });
-
-
+      
 
 
 //  делаю гамбургер
