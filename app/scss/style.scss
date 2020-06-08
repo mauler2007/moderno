@@ -130,7 +130,15 @@
         display: none;   
     }
 }
-// наверное тутД
+// наверное тут
+.header__btn-register {
+    display: none;
+    &.header__btn-login--off{
+        display: none;   
+    }
+}
+
+
 
 .user{
     margin-left: 20px;
@@ -502,7 +510,7 @@
 }
 .page-404__title{
     @include f300;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 300;
     margin-bottom: 40px;
     letter-spacing: 9px;
@@ -738,6 +746,66 @@
 .settings__line{
     margin-bottom: 21px;
     display: flex;
+    .jq-selectbox{
+        width: 100%;
+        // margin-left: ?;
+    }
+    .jq-selectbox__select {
+        max-width: 540px;
+        width: 100%;
+        height: 40px;
+        padding: 2px 0px 0 10px;
+        border: 1px solid #dedede;
+        border-bottom-color: #dedede;
+        border-radius: 0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular' , sans-serif ;
+        color: #707070;
+        text-shadow: none;
+        float:right;
+    }
+    .jq-selectbox__trigger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 34px;
+        height: 100%;
+        border-left: none;
+    }
+
+    .jq-selectbox__dropdown {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 2px 0 0;
+        padding: 0;
+        border: 1px solid #CCC;
+        border-radius: 4px;
+        background: #FFF;
+        box-shadow: none;
+        font: 14px/18px Arial,sans-serif;
+    }
+    .jq-selectbox__trigger-arrow {
+        position: absolute;
+        top: 14px;
+        right: 12px;
+        width: 0;
+        height: 0;
+        border-top: 0px solid transparent;
+        border-right: 0px solid transparent;
+        border-left: 0px solid transparent;
+        &::before{
+            content: "\f0d7";
+            font-family: 'icomoon';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+        }
+    }
+
+
+
+
     label{
         width: 260px;
         color: #444;
@@ -844,6 +912,13 @@
 .products {
  padding: 110px 0 ;
  background-color: $grey;
+ max-width: 1920px;
+ margin: 0 auto;
+}
+
+.product__slider-wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .products__inner-btn {
@@ -868,13 +943,19 @@
 
 .products__inner-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: -30px;
     flex-wrap: wrap;
 }
-
+.products .product__item{
+    flex-basis: calc(25%-30px);
+    margin-left: 30px;
+}
 .product__item {
-    max-width: 450px;
+    max-width: 442px;
     width: 100%;
+    flex-basis: calc(25%-30px);
+    margin-left: 30px;
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
     margin-bottom: 30px;
     &-img {
@@ -1583,7 +1664,8 @@ button.icon-unsorted {
 
 .product-page__content {
     .product__item {
-        max-width: 270px;
+        flex-basis: calc(33.333% - 30px);
+        margin-left: 30px;
         background-color: #fff;
         transition: all .5s;
     }
@@ -1610,9 +1692,10 @@ button.icon-unsorted {
 
 .product-page__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 30px;
     flex-wrap: wrap;
+    margin-left: -30px;
 }
 
 .pagination{
@@ -1689,6 +1772,7 @@ button.icon-unsorted {
 .product__item {
     &.list {
         max-width: 100%;
+        flex-basis: 100%;
         .product__item-img {
             width: 240px;
             float: left;
@@ -1749,7 +1833,7 @@ button.icon-unsorted {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 0;   
+    padding: 16px;   
 }
 .product-one__images{
     max-width: 829px;
@@ -2196,7 +2280,7 @@ button.icon-unsorted {
 }
 .profile__banner-images {
     padding: 20px;
-    width: 829px;
+    max-width: 829px;
     height: 332px;
     background-repeat: no-repeat;  
     background-position: center center;
@@ -2306,6 +2390,324 @@ background-color: #f4f6f5;
 }
 
 //  end profile
+
+// start upload 
+// startupload 
+
+.upload__inner{
+    background-color: #fff;
+    border: 1px solid #dedede;
+    margin-bottom: 110px;
+    
+    // button{
+    //     color: #fff;
+    //     background-color: $green;
+    //     border: none;
+    //     padding: 15px 36px;
+    //     margin-left: 175px;
+    //     cursor: pointer;
+    // }
+}
+.upload__inner-title {
+    padding: 16px 35px 18px;
+    @include f500;
+    font-size: 24px;
+    color: $bg;
+    border-bottom:1px solid #dedede;
+    margin-bottom: 40px;
+}
+.upload__inner-content {
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+    .form-btn{
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        margin-left: 175px;
+        cursor: pointer;
+    }
+}  
+.upload__line {
+    display: flex;
+    // align-items: center;
+    // justify-content: space-between;   
+    margin-bottom: 20px;
+    @include f500;
+    label{
+        padding-top: 5px;
+        color: #444444;
+        min-width: 175px;
+        // padding-right: 15px;
+        span{
+            color: $green;
+
+        }
+        
+    }
+    select,
+    input,
+    textarea{
+        
+        padding-top: 5px;
+        width: 100%;
+        display: block;
+        border:1px solid #dedede;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0 18px;
+        &::placeholder{
+            color: #707070;
+        }
+    }
+    textarea{
+        resize: none;
+        height: 150px;
+        padding: 8px 18px;
+    }
+    input[type="file"] {
+        outline: none;
+    }
+    .jq-file {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        border:1px solid #dedede;
+        height: 40px;
+        background-color: #f9f9f9;
+    }
+    .jq-file__name {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0 18px;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 4px;
+        background:transparent;
+        box-shadow: none;
+        font-size: 12px;
+        color: #707070;
+        line-height: 40px;
+        margin-left: 100px;
+    }
+    .jq-file__browse {
+        top: 5px;
+        right: auto;
+        left: 9px;
+        padding: 0 12px ;
+        line-height: 26px;
+        font-size: 12px;
+        border: 1px solid #d7d7d7;
+        border-left: 1px solid #d7d7d7;
+        border-radius: 0 ;
+        background: #fff;
+        box-shadow: none;
+        text-shadow: none;
+        color: #444;
+    }
+    
+    .jq-selectbox{
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid  #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius:0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular' , sans-serif ;
+        line-height: 40px;
+        color: #707070;
+        text-shadow: none;
+    }
+
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+            &::before {
+            content: "\f0d7";
+            font-family: 'icomoon' ; 
+            }
+    }
+    .jq-selectbox__trigger {
+        border-left:none;
+    }
+    .jq-selectbox__trigger{
+        margin: 0;
+    }   
+} 
+// end upload 
+// end upload 
+
+
+// start  withdrawals 
+.withdrawals {
+
+}
+.withdrawals__inner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+.withdrawals__col{
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100%;
+}
+.withdrawals__title {
+    padding: 18px 32px 24px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+    color: $bg;
+    @include f500;
+    font-size: 24px;
+}
+
+
+.withdrawals__box-content{
+    padding-left: 35px;
+    padding-right: 40px;
+    .form-btn{
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        margin-left: 175px;
+        cursor: pointer;
+        margin-bottom: 50px;
+        margin-left: 0px;
+    }
+    // button{
+    //     margin-bottom: 50px;
+    //     color: #fff;
+    //     background-color: $green;
+    //     border: none;
+    //     padding: 15px 36px;
+    //     margin-left: 175px;
+    //     cursor: pointer;
+    // }
+}
+.withdrawals__form-line {
+    margin-bottom: 25px;
+    label{
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        @include f500;
+        margin-bottom: 15px;
+        color: $bg;
+        span{
+            color: $green;
+        }
+    }
+    input,
+    select{
+        padding-top: 5px;
+        width: 100%;
+        display: block;
+        border:1px solid #dedede;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0 18px;
+        &::placeholder{
+            color: #707070;
+        }
+    }
+    select{
+
+    }
+    .jq-selectbox{
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid  #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius:0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular' , sans-serif ;
+        line-height: 40px;
+        color: #707070;
+        text-shadow: none;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        &::before {
+            content: "\f0d7";
+            font-family: 'icomoon' ; 
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left:none;
+    }
+    .jq-selectbox__trigger{
+        margin: 0;
+    }  
+}
+
+
+.withdrawals__content-items{
+    margin-bottom: 35px;
+    margin-left: 40px;
+    margin-right: 40px
+}
+
+
+.withdrawals__content-item {
+    display: flex;
+    width: 100%;
+    min-height: 42px;
+    align-items: center;
+    font-size: 13px;
+        &:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+}
+.withdrawals__content-date {
+    width: 154px;
+    padding-left: 20px;
+    @include f500;
+    color  :#444;
+}
+.withdrawals__content-mail {
+    width: 180px;
+    @include f500;
+}
+.withdrawals__content-price {
+    width: 70px;
+    @include f700;
+}
+
+.withdrawals__content-status {
+    width: 88px;
+    @include f700;
+    font-size: 13px;
+    
+    
+    &.withdrawals__content-paid {
+        color: $green;
+    }
+    
+}
+
+
+
+// end  withdrawals  
 
 
 
